@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Retro Converter</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+<h1>🎮 Retro Converter</h1>
+
+<input id="fileInput" type="file" accept="audio/*">
+
+<p id="songName">曲未選択</p>
+
+<label>モード</label>
+<select id="mode">
+    <option value="famicom">ファミコン</option>
+</select>
+
+<label>レトロ度</label>
+<input id="strength" type="range" min="0" max="100" value="75">
+
+<canvas id="waveform"></canvas>
+
+<button id="convertBtn">変換</button>
+
+<audio id="player" controls></audio>
+
+<a id="downloadLink" download="retro.wav">
+    <button>保存</button>
+</a>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
